@@ -1,12 +1,16 @@
 import {createFactory} from 'react';
 
-export const clients = [
+
+//load component
+import Recipelist from '../clients/Recipelist';
+
+export const allClients = [
   {
     description:'Turn your favorite recipes on Pinterest into your grocery list within seconds using Recipelist. Ordering the ingredients is just another click away.',
     duration: '2017-09-01',
     name: 'Recipelist',
     logo: '',
-    loadComponent:'',
+    loadComponent:createFactory(Recipelist),
     order: 0,
     properties: null,
     slug: 'recipelist',

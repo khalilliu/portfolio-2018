@@ -4,7 +4,7 @@ import {withRouter} from 'react-router-dom';
 
 import SmallCard from './SmallCard';
 
-const getPrevClient({allClients, clientId}) => {
+const getPrevClient = ({allClients, clientId}) => {
   if(clientId === 0){
     return allClients[allClients.length-1]
   }else{
@@ -12,8 +12,8 @@ const getPrevClient({allClients, clientId}) => {
   }
 }
 
-const getNextClient({allClients, clientId}) => {
-  if(clientId === allClients.length){
+const getNextClient = ({allClients, clientId}) => {
+  if(clientId === allClients.length-1){
     return allClients[0];
   }else{
     return allClients[clientId+1]
@@ -22,7 +22,7 @@ const getNextClient({allClients, clientId}) => {
 
 const PrevNext = (props) => {
   const prevClient = getPrevClient(props);
-  const nextClient(props);
+  const nextClient = getNextClient(props);
 
   document.onkeydown = (e) => {
     switch(e.keyCode){

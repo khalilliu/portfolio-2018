@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Route,Switch} from 'react-router-dom';
 import Nav from './components/Nav';
 import Home from './pages/Home';
 import About from './pages/About';
+import Client from './pages/Client';
 import PageNotFound from './pages/PageNotFound';
 
 import Footer from './components/Footer';
@@ -26,6 +27,7 @@ const App = () => (
       <Switch>
         <Route exact path='/' component={Home}/>
         <Route path="/about" component={About} />
+        <Route path="/work/:slug" component={Client} />
         <Route component={PageNotFound} />
       </Switch>
       <Footer/>

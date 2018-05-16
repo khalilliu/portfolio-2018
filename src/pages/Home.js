@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 import Header from '../components/Header';
 import Card from '../components/Card';
 
-import {clients} from '../utils/client';
+import {allClients} from '../utils/client';
 
 class Home extends Component{
   componentDidMount(){
@@ -24,7 +24,7 @@ class Home extends Component{
           <h3 className='col-1-of-1 headline'>Some Projects</h3>
         </section>
         <section className='container clients'>
-          {clients.map(client => {
+          {allClients.map(client => {
             const className = {
               className: client.properties !== null ? ['card Tilt', client.properties.className].join(' ') : 'card Tilt'
             }

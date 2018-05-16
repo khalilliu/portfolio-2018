@@ -1275,13 +1275,14 @@ h2 {
 }
 
 .client-quote {
-  padding: 300px 0
+  padding: 150px 0
 }
 
 .client-quote blockquote {
   font-size: 2rem;
   line-height: 3rem;
-  font-family: G;
+  letter-spacing: .1rem;
+  font-family: G,'PingFang fc';
   text-align: center
 }
 
@@ -1425,12 +1426,12 @@ h2 {
 .prevnext .card:first-child {
   flex-grow: 0;
   flex-shrink: 0;
-  flex-basis: calc(99.9% * 5/12 - 17.5px);
-  width: calc(99.9% * 5/12 - 17.5px)
+  flex-basis: calc(99.9% * 6/12 - 20px);
+  width: calc(99.9% * 6/12 - 20px)
 }
 
 .prevnext .card:first-child:nth-child(1n) {
-  margin-right: 30px;
+  margin-right: 40px;
   margin-left: 0
 }
 
@@ -1470,8 +1471,8 @@ h2 {
 .prevnext .card:nth-child(2) {
   flex-grow: 0;
   flex-shrink: 0;
-  flex-basis: calc(99.9% * 7/12 - 12.5px);
-  width: calc(99.9% * 7/12 - 12.5px)
+  flex-basis: calc(99.9% * 6/12 - 20px);
+  width: calc(99.9% * 6/12 - 20px)
 }
 
 .prevnext .card:nth-child(2):nth-child(1n) {
@@ -1700,4 +1701,8 @@ h2 {
 
 .link-border a:hover:after{
   width:100%;
+}
+
+.Tilt-inner h4{
+  margin-bottom: 5px;
 }

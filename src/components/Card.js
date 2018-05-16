@@ -11,8 +11,9 @@ const Card = ({client, className, size}) => (
     style={{ height: 416,borderRadius:12, overflow:'hidden'}}
     options={{
       max:8,
+      perspective: 500,
       speed:500,
-      scale:1.02,
+      scale:1.05,
       glare:true
     }}
     {...className}

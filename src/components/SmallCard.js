@@ -3,11 +3,17 @@ import PropTypes from 'prop-types';
 import Tilt from 'react-tilt';
 import {Link} from 'react-router-dom';
 
+import Card from './Card';
+
 const SmallCard = ({client, direction}) => (
   <Tilt
+    style={{
+      borderRadius:12, overflow:'hidden'
+    }}
     options={{
-      max: 5,
+      max: 10,
       speed: 500,
+      perspective:500,
       scale:1.02,
       glare: true
     }}
@@ -16,7 +22,6 @@ const SmallCard = ({client, direction}) => (
         ? ['card Tilt half-size', client.properties.className].join(' ') : 'card half-size Tilt'
     }
   >
-    <div className='Tile-inner'>
       <Link 
         to={`/work/${client.slug}`}
         key={client.name}
@@ -26,16 +31,16 @@ const SmallCard = ({client, direction}) => (
           backgroundSize:'cover'
         }}
       >
-        <div>
+        <div className='Tilt-inner'>
           <h4>{direction} Project</h4>
+          <hr/>
           <h3>{client.name}</h3>
         </div>
       </Link>
-    </div>
   </Tilt>
 )
 
-Card.PropTypes = {
+SmallCard.propTypes = {
   client: PropTypes.shape({
     name: PropTypes.string.isRequired,
     slug: PropTypes.string.isRequired,
